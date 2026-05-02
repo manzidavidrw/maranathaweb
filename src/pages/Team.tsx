@@ -155,7 +155,7 @@ const loanRecoveryCommittee = [
     role: "Recovery Committee Member",
     department: "Loan Recovery Committee",
     bio: "Expert in member communication and payment plan development.",
-    image: "/images/team/samuel.jpg",
+    image: "/images/team/samuel.jpeg",
     initials: "RM",
     color: "bg-primary/20 text-primary",
   },
@@ -261,19 +261,7 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Stats bar */}
-      <section className="bg-card border-b border-border">
-        <div className="container-max px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
-            {values.map((v) => (
-              <div key={v.label} className="text-center py-8 px-4">
-                <p className="font-heading text-3xl font-bold text-chocolate mb-1">{v.value}</p>
-                <p className="text-sm font-body text-muted-foreground">{v.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* Board of Directors - 4 members */}
       <section className="section-padding">

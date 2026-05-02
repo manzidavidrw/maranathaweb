@@ -42,9 +42,9 @@ const AboutSection = () => {
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-chocolate/10 rounded-full translate-y-1/2 -translate-x-1/2" />
               <div className="relative space-y-8">
                 {[
-                  { number: "15+", label: "Years Serving Members" },
-                  { number: "10,000+", label: "Active Members" },
-                  { number: "₦50M+", label: "Total Loans Disbursed" },
+                  { number: "7+", label: "Years Serving Members" },
+                  { number: "2,000+", label: "Active Members" },
+                  { number: "RF 3.3B+", label: "Total Loans Disbursed" },
                   { number: "98%", label: "Member Satisfaction" },
                 ].map((stat) => (
                   <div key={stat.label} className="flex items-center gap-4">

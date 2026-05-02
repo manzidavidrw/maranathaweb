@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 bg-forest/20 border border-forest/30 rounded-full px-4 py-1.5 mb-6">
             <div className="w-2 h-2 rounded-full bg-forest animate-pulse" />
-            <span className="text-sm font-body text-forest-light">Trusted by 10,000+ members</span>
+            <span className="text-sm font-body text-forest-light">Trusted by 2000+ members</span>
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6">
@@ -38,9 +38,9 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6">
             {[
-              { icon: Users, label: "Active Members", value: "10K+" },
-              { icon: Shield, label: "Years of Trust", value: "15+" },
-              { icon: TrendingUp, label: "Loans Disbursed", value: "₦50M+" },
+              { icon: Users, label: "Active Members", value: "2K+" },
+              { icon: Shield, label: "Years of Trust", value: "7+" },
+              { icon: TrendingUp, label: "Loans Disbursed", value: "RF 3.3B+" },
             ].map((stat) => (
               <div key={stat.label} className="text-center sm:text-left">
                 <stat.icon className="w-5 h-5 text-gold mb-1 mx-auto sm:mx-0" />
