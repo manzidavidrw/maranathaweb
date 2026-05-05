@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "../assets/Logo_updated.png";
+
+const LOGO = "/images/logo/Logo_updated.png";
 
 const Footer = () => {
   return (
@@ -10,9 +11,9 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src={logo}
+                src={LOGO}
                 alt="MFSC Logo"
-                className="h-12 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain "
               />
             </div>
             <p className="text-sm font-body text-background/60 leading-relaxed">

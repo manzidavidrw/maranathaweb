@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const CTASection = () => {
+  const scrollToFooter = () => {
+    const footer = document.getElementById("contact"); // matches id in Footer
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-chocolate via-chocolate-light to-forest opacity-95" />
@@ -17,11 +24,13 @@ const CTASection = () => {
           Join thousands of members who are building a brighter financial future with Maranatha Financial Service Cooperative.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-background text-chocolate hover:bg-background/90 font-semibold text-base px-8 py-6">
-            Open an Account <ArrowRight className="ml-1" />
-          </Button>
-          <Button size="lg" variant="outline" className="border-2 border-background/40 text-background hover:bg-background/10 font-semibold text-base px-8 py-6 bg-transparent">
-            Contact Us
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-2 border-background/40 text-background hover:bg-background/10 font-semibold text-base px-8 py-6 bg-transparent"
+            onClick={scrollToFooter}
+          >
+            Contact Us <ArrowRight className="ml-1" />
           </Button>
         </div>
       </div>

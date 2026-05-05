@@ -2,17 +2,17 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Adebayo Johnson",
+    name: "Uwimana Elysee",
     role: "Small Business Owner",
     quote: "MFSC gave me the loan I needed to expand my shop. The process was smooth and the interest rate was very fair. I'm grateful for their support.",
   },
   {
-    name: "Grace Okonkwo",
+    name: "Amina Mukamana",
     role: "Teacher & Saver",
     quote: "I've been saving with MFSC for 5 years now. The returns are great and I love that my money is working for the community too.",
   },
   {
-    name: "Emmanuel Adeyemi",
+    name: "Jean Pierre Ndayishimiye",
     role: "Farmer",
     quote: "The financial literacy program changed how I manage my farm's income. MFSC truly cares about empowering their members.",
   },
