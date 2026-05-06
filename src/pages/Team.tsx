@@ -41,7 +41,7 @@ const ictCommission = [
 ];
 
 const operationsTeam = [
-  { name: "NDAYISENGA Jean Isaac", role: "Managing Director", department: "Operations Team", bio: "", image: "/images/team/Isaac.JPG", initials: "NJ", color: "bg-primary/20 text-primary" },
+  { name: "NDAYISENGA Jean Isaac", role: "Director of Liaison", department: "Operations Team", bio: "", image: "/images/team/jeanisaac.png", initials: "NJ", color: "bg-primary/20 text-primary" },
   { name: "ISIMBI ISHIMWE Ange", role: "Accountant & Public Relation Officer", department: "Operations Team", bio: "", image: "/images/team/ange-isimbi.jpg", initials: "IA", color: "bg-gold/20 text-chocolate" },
   { name: "Maxime Blaise", role: "Loan Officer", department: "Operations Team", bio: "", image: "/images/team/maxime.jpeg", initials: "MB", color: "bg-chocolate/20 text-chocolate" },
   { name: "MIHIGO DANIEL", role: "Loan Officer", department: "Operations Team", bio: "", image: "/images/team/danny.jpeg", initials: "MD", color: "bg-chocolate/20 text-chocolate" },

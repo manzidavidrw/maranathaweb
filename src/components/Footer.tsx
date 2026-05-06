@@ -1,8 +1,21 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const LOGO = "/images/logo/Logo_updated.png";
 
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
+  const handleAnchorClick = (href: string) => {
+    if (!isHome) {
+      window.location.href = "/" + href;
+      return;
+    }
+    const el = document.querySelector(href);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <footer id="contact" className="bg-foreground section-padding">
       <div className="container-max">
@@ -13,7 +26,7 @@ const Footer = () => {
               <img
                 src={LOGO}
                 alt="MFSC Logo"
-                className="h-12 w-auto object-contain "
+                className="h-12 w-auto object-contain"
               />
             </div>
             <p className="text-sm font-body text-background/60 leading-relaxed">
@@ -25,11 +38,30 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-bold text-background mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "About Us", "Services", "Contact"].map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-sm font-body text-background/60 hover:text-background transition-colors">{l}</a>
-                </li>
-              ))}
+              <li>
+                <button onClick={() => handleAnchorClick("#home")}
+                  
+                  className="text-sm font-body text-background/60 hover:text-background transition-colors"
+                >
+                  Home
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleAnchorClick("#about")}
+                  className="text-sm font-body text-background/60 hover:text-background transition-colors"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <Link
+                  to="/team"
+                  className="text-sm font-body text-background/60 hover:text-background transition-colors"
+                >
+                  Our Team
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -37,9 +69,14 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-bold text-background mb-4">Services</h4>
             <ul className="space-y-2">
-              {["Savings Account", "Micro Loans", "Insurance", "Financial Literacy"].map((l) => (
+              {["Savings Account", "Loan Products", "Financial Literacy"].map((l) => (
                 <li key={l}>
-                  <a href="#" className="text-sm font-body text-background/60 hover:text-background transition-colors">{l}</a>
+                  <button
+                    onClick={() => handleAnchorClick("#services")}
+                    className="text-sm font-body text-background/60 hover:text-background transition-colors"
+                  >
+                    {l}
+                  </button>
                 </li>
               ))}
             </ul>
