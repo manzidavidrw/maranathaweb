@@ -6,6 +6,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import LoanCalculator from "@/components/LoanCalculator";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import Team from "../pages/Team";
+import ContactSection from "../components/ContactSection";
 
 const Index = () => {
   return (
@@ -16,6 +18,8 @@ const Index = () => {
       <LoanCalculator />
       <AboutSection />
       <TestimonialsSection />
+      <Team />
+      <ContactSection />
       <CTASection />
       <Footer />
     </div>

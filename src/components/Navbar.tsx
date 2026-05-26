@@ -6,11 +6,10 @@ import { Menu, X, Mail } from "lucide-react";
 const LOGO = "/images/logo/Logo_updated.png";
 
 const navLinks = [
-  { label: "Home",     href: "/",        type: "route"  },
-  { label: "About",    href: "#about",   type: "anchor" },
+  { label: "Home",     href: "#home", type: "anchor"  },
   { label: "Services", href: "#services",type: "anchor" },
-  { label: "Loans",    href: "/loans",   type: "route"  },
-  { label: "Our Team", href: "/team",    type: "route"  },
+   { label: "About",    href: "#about",   type: "anchor" },  
+  { label: "Our Team", href: "#team",    type: "anchor"  },
   { label: "Contact",  href: "#contact", type: "anchor" },
 ];
 

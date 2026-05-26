@@ -71,7 +71,7 @@ const branch = {
   address: "Rwanda, Kigali Ets Ndamage Building",
   phone: "+250 796 888 997",
   email: "maranathafinancialservicecoop@gmail.com",
-  hours: "Mon–Fri 8am–5pm, Sat 9am–1pm",
+  hours: "Mon–Fri 8am–5pm",
 };
 
 const BecomeMember = () => {

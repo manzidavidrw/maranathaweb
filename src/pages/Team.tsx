@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Mail } from "lucide-react";
 import { useState } from "react";
@@ -36,8 +35,7 @@ const loanRecoveryCommittee = [
 
 const ictCommission = [
   { name: "IMANANIYOGAKIZA Samuel", role: "ICT Committee President", department: "ICT Commission", bio: "", image: "/images/team/sam.jpg", initials: "IS", color: "bg-primary/20 text-primary" },
-  { name: "Manzi David", role: "IT", department: "ICT Commission", bio: "", image: "/images/team/manzi.jpg", initials: "IS", color: "bg-primary/20 text-primary" },
-
+  { name: "Manzi David", role: "IT", department: "ICT Commission", bio: "", image: "/images/team/manzi.jpg", initials: "MD", color: "bg-forest/20 text-forest" },
 ];
 
 const operationsTeam = [
@@ -69,7 +67,7 @@ const TeamCard = ({ person }: { person: typeof boardMembers[0] }) => {
   const showImage = !imageError && person.image;
 
   return (
-    <div className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-border hover:border-primary/20">
+    <div id="team" className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-border hover:border-primary/20">
       {/* Photo area — tall portrait */}
       <div className="relative w-full aspect-[3/4] bg-muted overflow-hidden">
         {showImage ? (
@@ -88,23 +86,19 @@ const TeamCard = ({ person }: { person: typeof boardMembers[0] }) => {
         {/* Gradient overlay — always visible at bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent" />
 
-        {/* Name + role pinned to bottom of photo */}
+        {/* Department pinned to bottom of photo */}
         <div className="absolute bottom-0 left-0 right-0 p-4">
-          <h3 className="font-heading font-bold text-background text-sm leading-tight mb-0.5">
-            {person.name}
-          </h3>
-          <p className="text-primary-foreground/80 text-xs font-body leading-tight line-clamp-2"
+          <p className="text-xs font-body font-semibold uppercase tracking-wider"
             style={{ color: "hsl(var(--gold))" }}>
-            {person.role}
+            {person.department}
           </p>
         </div>
       </div>
 
-      {/* Department tag below card */}
-      <div className="bg-card px-4 py-2.5 border-t border-border">
-        <span className="text-[11px] font-body font-semibold text-muted-foreground uppercase tracking-wider">
-          {person.department}
-        </span>
+      {/* Name + role in bottom strip */}
+      <div className="bg-card px-4 py-3 border-t border-border">
+        <h3 className="font-heading font-bold text-foreground text-sm leading-tight">{person.name}</h3>
+        <p className="text-xs font-body text-muted-foreground mt-0.5">{person.role}</p>
       </div>
     </div>
   );
@@ -137,6 +131,7 @@ const Team = () => {
           </div>
         </div>
       </section>
+
       {/* Sticky jump nav */}
       <div className="sticky top-[5.5rem] z-40 bg-background/90 backdrop-blur border-b border-border">
         <div className="container-max px-4 sm:px-6 lg:px-8">
@@ -193,7 +188,7 @@ const Team = () => {
             <div className="bg-card rounded-3xl p-10 text-center relative overflow-hidden border border-border">
               <div className="absolute top-0 right-0 w-40 h-40 bg-gold/10 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="relative">
-                <p className="font-heading text-5xl font-bold text-chocolate mb-2">22</p>
+                <p className="font-heading text-5xl font-bold text-chocolate mb-2">21</p>
                 <p className="font-body text-muted-foreground mb-8">dedicated members across all committees</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {["BoD", "AC", "CC", "LR", "ICT", "OPS"].map((label) => (
@@ -225,8 +220,6 @@ const Team = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-foreground section-padding">
+    <footer className="bg-[#6F4E37] section-padding">
       <div className="container-max">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}

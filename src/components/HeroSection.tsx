@@ -3,6 +3,11 @@ import heroBg from "@/assets/hero-bg.jpg";
 import { ArrowRight, Users, Shield, TrendingUp } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20">
       {/* Background */}
@@ -15,7 +20,7 @@ const HeroSection = () => {
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 bg-forest/20 border border-forest/30 rounded-full px-4 py-1.5 mb-6">
             <div className="w-2 h-2 rounded-full bg-forest animate-pulse" />
-            <span className="text-sm font-body text-forest-light">Trusted by 2000+ members</span>
+            <span className="text-sm font-body text-[#04ea60]">Trusted by 1000+ members</span>
           </div>
 
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6">
@@ -27,11 +32,8 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="hero" size="lg" className="text-base px-8 py-6">
+            <Button onClick={scrollToContact} variant="hero" size="lg" className="text-base px-8 py-6">
               Become a Member <ArrowRight className="ml-1" />
-            </Button>
-            <Button variant="hero-outline" size="lg" className="text-base px-8 py-6 border-background/40 text-background hover:bg-background/10 hover:text-background">
-              Learn More
             </Button>
           </div>
 
